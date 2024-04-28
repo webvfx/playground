@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body>
+    <div class="container">
+      <svg class="loader-container" viewBox="0 0 50 50">
+        <circle class="path-example-5" cx="25" cy="25" r="20" />
+      </svg>
+    </div>
+
+    <style>
+      .container {
+        max-width: 150px;
+      }
+
+      .loader-container {
+        animation: rotate 2s linear infinite;
+      }
+
+      .path-example-5 {
+        stroke: black;
+        fill: none;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-dasharray: 1, 126;
+        animation: dash-3 1.5s ease-in-out infinite;
+      }
+
+      @keyframes rotate {
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      @keyframes dash-3 {
+        0% {
+          stroke-dasharray: 1, 126;
+          stroke-dashoffset: 0;
+        }
+        50% {
+          stroke-dasharray: 126, 126;
+          stroke-dashoffset: -50;
+        }
+        100% {
+          stroke-dasharray: 126, 126;
+          stroke-dashoffset: -124;
+        }
+      }
+    </style>
+  </body>
+</html>

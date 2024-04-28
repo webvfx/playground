@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body>
+    <div class="container">
+      <svg width="306" height="150" viewBox="0 0 306 150" fill="none">
+        <path
+          d="M30 124L1.55035 86.2306C1.23879 85.817 1.28068 85.2465 1.66494 84.8994C22.5647 66.0197 64.2509 28.2491 69 23.5C73.4581 19.0419 75.961 8.20038 76.829 2.27211C76.9235 1.62647 77.5867 1.22778 78.1944 1.46539C92.7616 7.16094 120.831 18.8311 125.5 23.5C130.271 28.2709 199.979 108.188 234.865 148.27C235.225 148.684 235.836 148.712 236.253 148.355L305 89.5"
+          class="route"
+        />
+        <path
+          d="M30 124L1.55035 86.2306C1.23879 85.817 1.28068 85.2465 1.66494 84.8994C22.5647 66.0197 64.2509 28.2491 69 23.5C73.4581 19.0419 75.961 8.20038 76.829 2.27211C76.9235 1.62647 77.5867 1.22778 78.1944 1.46539C92.7616 7.16094 120.831 18.8311 125.5 23.5C130.271 28.2709 199.979 108.188 234.865 148.27C235.225 148.684 235.836 148.712 236.253 148.355L305 89.5"
+          class="route-progress"
+        />
+      </svg>
+    </div>
+
+    <style>
+      .route {
+        stroke: #dcdcdc;
+        stroke-width: 3;
+        stroke-linecap: round;
+      }
+
+      .route-progress {
+        stroke: #659df6;
+        stroke-width: 3;
+        stroke-linecap: round;
+        stroke-dasharray: 0, 475;
+        animation: progress 10s infinite;
+      }
+
+      @keyframes progress {
+        0% {
+          stroke-dasharray: 0, 475;
+        }
+        20% {
+          stroke-dasharray: 24, 475;
+        }
+        40% {
+          stroke-dasharray: 50, 475;
+        }
+        80% {
+          stroke-dasharray: 110, 475;
+        }
+        100% {
+          stroke-dasharray: 150, 475;
+        }
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body>
+    <div class="container">
+      <svg viewBox="0 0 100 100">
+        <circle r="25" cx="50" cy="50" class="slice circle-1"></circle>
+        <circle r="25" cx="50" cy="50" class="slice circle-2"></circle>
+        <circle r="25" cx="50" cy="50" class="slice circle-3"></circle>
+      </svg>
+    </div>
+
+    <style>
+      .container {
+        max-width: 150px;
+      }
+
+      .slice {
+        fill: none;
+        stroke-width: 50;
+      }
+
+      .circle-1 {
+        stroke: #25a1cd;
+        stroke-dasharray: 47 157;
+      }
+
+      .circle-2 {
+        stroke: #e97556;
+        stroke-dasharray: 94.2 157;
+        stroke-dashoffset: -47;
+      }
+
+      .circle-3 {
+        stroke: #9377d6;
+        stroke-dasharray: 15.7 157;
+        stroke-dashoffset: -141;
+      }
+    </style>
+  </body>
+</html>
